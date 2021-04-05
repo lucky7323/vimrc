@@ -111,37 +111,6 @@
 "" }}}
 
 
-"" Syntax checking for Vim with external syntax checker
-"" Plugin: Syntastic {{{
-  " TODO: Too slow because of synchronous job
-  set statusline+=%#warningmsg#
-  set statusline+=%{SyntasticStatuslineFlag()}
-  set statusline+=%*
-  let g:syntastic_always_populate_loc_list=1
-  let g:syntastic_loc_list_height=5
-  let g:syntastic_auto_loc_list=1
-  let g:syntastic_check_on_open=1
-  let g:syntastic_check_on_wq=0
-  " Symbols
-  let g:syntastic_error_symbol='✘'
-  let g:syntastic_warning_symbol='▲'
-  " For C / C++
-  let g:syntastic_cpp_compiler='clang++'
-  let g:syntastic_cpp_compiler_options=' -std=c++11'
-  " For Python
-  let g:syntastic_python_checkers=['flake8']
-  " For Scala & Java
-  " let g:syntastic_scala_checkers=['fsc', 'scalac']
-  " For Javascript & Node.JS
-  let g:syntastic_javascript_checkers=['eslint']
-  let s:eslint_path=system('PATH=$(npm bin):$PATH && which eslint')
-  let b:syntastic_javascript_eslint_exec=substitute(s:eslint_path,
-  \ '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
-  " For Shell Script(sh, bash)
-  let g:syntastic_sh_checkers=['shellcheck']
-"" }}}
-
-
 "" Asynchronous build and test dispatcher
 "" Plugin: Vim Dispatch {{{
 "" }}}
@@ -200,21 +169,6 @@
     let g:deoplete#sources#go#use_cache=1
     let g:deoplete#sources#go#json_directory='~/.cache/deoplete/go/$GOOS_$GOARCH'
   endif
-  " Run deoplete automatically
-  let g:deoplete#enable_at_startup=1
-  call deoplete#enable()
-  " Delay the completion after input in milliseconds
-  call deoplete#custom#option('auto_complete_delay', 200)
-  " Set the limit of candidates
-  call deoplete#custom#option('max_list', 64)
-  " Set the number of the input completion at the time of key input
-  call deoplete#custom#option('min_pattern_length', 2)
-  " When a capital letter is included in input, does not ignore
-  call deoplete#custom#option('smart_case', v:true)
-  " Close the preview window after completion is done
-  autocmd CompleteDone * pclose!
-  " Disable the preview window
-  set completeopt-=preview
 "" }}}
 
 
@@ -253,24 +207,6 @@
 "" }}}
 
 
-"" Snippet engine for Vim
-"" Plugin: UltiSnips {{{
-  " Explicitly set Python version to use
-  if has('python3')
-    let g:UltiSnipsUsePythonVersion=3
-  else
-    let g:UltiSnipsUsePythonVersion=2
-  endif
-  " Configure keys trigerring UltiSnips
-  let g:UltiSnipsExpandTrigger='<Tab>'
-  let g:UltiSnipsJumpForwardTrigger='<Tab>'
-  let g:UltiSnipsJumpBackwardTrigger='<S-Tab>'
-  let g:UltiSnipsListSnippets='<Tab>l'
-  " If you want :UltiSnipsEdit to split your window.
-  let g:UltiSnipsEditSplit='vertical'
-"" }}}
-
-
 "" Wisely add `end` in ruby, vim, etc
 "" Plugin: Endwise {{{
 "" }}}
@@ -288,29 +224,6 @@
   let g:NERDCommentEmptyLines=1
   " Enable trimming of trailing whitespace when uncommenting
   let g:NERDTrimTrailingWhitespace=1
-"" }}}
-
-
-"" The interactive scratchpad for hackers
-"" Plugin: Codi {{{
-  " Set shortcut to toggle Codi
-  nnoremap <Leader><Leader>c :Codi!!<CR>
-  xnoremap <Leader><Leader>c :Codi!!<CR>
-"" }}}
-
-
-"""""" Javascript & Node
-"" TODO: Key mapping
-"" Tern-based Javascript editing support
-"" Plugin: Tern for Vim {{{
-  " Set timeout
-  let g:tern_request_timeout=1
-  " Display argument type hints when the cursor is left over a function
-  let g:tern_show_argument_hints='on_hold'
-  " Display function signature in the completion menu
-  let g:tern_show_signature_in_pum='0'
-  " Disable Shortcuts
-  let g:tern_map_keys=0
 "" }}}
 
 

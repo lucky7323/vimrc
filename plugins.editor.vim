@@ -99,7 +99,6 @@
 
 
 "" Displaying thin vertical lines at each indentation level for code
-"" TODO: Very slow after Goyo mode and with long line files
 "" Plugin: indentLine {{{
   " Specify a character to  be used as indent line
   let g:indentLine_char='┆'

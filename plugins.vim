@@ -22,7 +22,6 @@
   "" Appearance
   Plug 'vim-airline/vim-airline'
   Plug 'vim-airline/vim-airline-themes'
-  Plug 'mhinz/vim-startify'
 
 
   "" VCS
@@ -42,7 +41,6 @@
   "" Search
   Plug 'ctrlpvim/ctrlp.vim'
   Plug 'Yggdroot/LeaderF', { 'do': './install.sh' }
-  Plug 'junegunn/fzf', { 'do': 'yes \| ./install --all --no-update-rc' }
   Plug 'chaoren/vim-wordmotion'
   Plug 'Lokaltog/vim-easymotion'
   Plug 'kshenoy/vim-signature'
@@ -101,25 +99,12 @@
   if has('nvim')
     " Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
   endif
-  Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
   Plug 'tpope/vim-endwise', {
   \ 'for': [
   \   'ruby', 'vim', 'sh', 'zsh', 'matlab', 'snippets'
   \ ]
   \ }
   Plug 'preservim/nerdcommenter'
-  Plug 'metakirby5/codi.vim'
-  " Hook into omni completion to handle autocompletion and provide more
-  function! BuildTern(info)
-    " info is a dictionary with 3 fields
-    " - name:   name of the plugin
-    " - status: 'installed', 'updated', or 'unchanged'
-    " - force:  set on PlugInstall! or PlugUpdate!
-    if a:info.status == 'installed' || a:info.force
-      !npm install
-    endif
-  endfunction
-  Plug 'marijnh/tern_for_vim', { 'for': ['javascript'], 'do': function('BuildTern') }
   Plug 'moll/vim-node'
   Plug 'othree/javascript-libraries-syntax.vim'
   Plug 'mattn/emmet-vim', {
@@ -128,7 +113,6 @@
   \   'css', 'less', 'sass', 'javascript'
   \ ]
   \ }
-  Plug 'junegunn/goyo.vim'
   Plug 'junegunn/limelight.vim'
   " Plug 'suan/vim-instant-markdown'
 
