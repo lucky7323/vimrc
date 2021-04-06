@@ -34,7 +34,7 @@ nnoremap <C-k><C-k> :<C-u>execute 'move -1-'. v:count1<CR>
 nnoremap <C-j><C-j> :<C-u>execute 'move +'. v:count1<CR>
 
 
-""" Hex Editor {{{
+""" Hex Editor {{
   " Map HexEditToggle to <F9>
   nnoremap <silent> <F9> :call HexEditToggle()<CR>
   let g:hexmode=0
@@ -94,3 +94,13 @@ nnoremap <C-j><C-j> :<C-u>execute 'move +'. v:count1<CR>
   " Shift+Tab to unindent in visual mode
   xnoremap <S-Tab> <gv
 " }}}
+
+
+""" Curly Braces {{{
+  inoremap { {}<Left>
+  inoremap {<CR> {<CR>}<Esc>O
+  inoremap {{ {
+  inoremap {} {}
+" }}}
+
+
