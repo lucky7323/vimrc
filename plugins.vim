@@ -70,9 +70,6 @@
   "" Programming
   Plug 'sheerun/vim-polyglot'
   Plug 'w0rp/ale'
-  " Plug 'neomake/neomake', { 'for': [
-  " \ 'c', 'cpp', 'java', 'python', 'javascript', 'scala', 'sh', 'vim'
-  " \ ] }
   " Plug 'scrooloose/syntastic'
   Plug 'tpope/vim-dispatch'
   Plug 'janko-m/vim-test'
@@ -95,9 +92,6 @@
   Plug 'wellle/tmux-complete.vim'
   " Plug 'sourcegraph/javascript-typescript-langserver', { 'do': 'npm install && npm run build' }
   " Plug 'neoclide/coc.nvim', {'tag': '*', 'do': 'yarn install'}
-  if has('nvim')
-    " Plug 'autozimu/LanguageClient-neovim', { 'do': ':UpdateRemotePlugins' }
-  endif
   Plug 'tpope/vim-endwise', {
   \ 'for': [
   \   'ruby', 'vim', 'sh', 'zsh', 'matlab', 'snippets'
