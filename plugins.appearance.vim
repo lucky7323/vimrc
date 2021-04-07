@@ -38,9 +38,7 @@
 "" Plugin: Vim Startify {{{
   " A list of files to bookmark
   let g:startify_bookmarks=[
-  \ '~/.vim/vimrc',
-  \ '~/.vim/plugins.vim',
-  \ '~/.zshrc',
+  \ '~/workspace',
   \ ]
   " A list of Vim regular expressions that filters recently used files
   let g:startify_skiplist=[
@@ -49,14 +47,6 @@
   \ 'plugged/.*/doc',
   \ 'bundle/.*/doc',
   \ ]
-  let g:ascii = [
-  \ '        __',
-  \ '.--.--.|__|.--------.',
-  \ '|  |  ||  ||        |',
-  \ ' \___/ |__||__|__|__|',
-  \ ''
-  \ ]
-  let g:startify_custom_header=startify#pad(g:ascii + startify#fortune#boxed())
   " When opening a file or bookmark, change to its directory
   let g:startify_change_to_dir=1
   " When opening a file or bookmark, seek and change to the root directory of the VCS
