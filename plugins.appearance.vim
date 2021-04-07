@@ -33,3 +33,34 @@
   set noshowmode
 "" }}}
 
+
+"" A fancy start screen for Vim
+"" Plugin: Vim Startify {{{
+  " A list of files to bookmark
+  let g:startify_bookmarks=[
+  \ '~/.vim/vimrc',
+  \ '~/.vim/plugins.vim',
+  \ '~/.zshrc',
+  \ ]
+  " A list of Vim regular expressions that filters recently used files
+  let g:startify_skiplist=[
+  \ 'COMMIT_EDITMSG',
+  \ $VIMRUNTIME .'/doc',
+  \ 'plugged/.*/doc',
+  \ 'bundle/.*/doc',
+  \ ]
+  let g:ascii = [
+  \ '        __',
+  \ '.--.--.|__|.--------.',
+  \ '|  |  ||  ||        |',
+  \ ' \___/ |__||__|__|__|',
+  \ ''
+  \ ]
+  let g:startify_custom_header=startify#pad(g:ascii + startify#fortune#boxed())
+  " When opening a file or bookmark, change to its directory
+  let g:startify_change_to_dir=1
+  " When opening a file or bookmark, seek and change to the root directory of the VCS
+  let g:startify_change_to_vcs_root=0
+  " The number of spaces used for left padding
+  let g:startify_padding_left=3
+"" }}}
