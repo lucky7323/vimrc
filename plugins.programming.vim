@@ -169,6 +169,21 @@
     let g:deoplete#sources#go#use_cache=1
     let g:deoplete#sources#go#json_directory='~/.cache/deoplete/go/$GOOS_$GOARCH'
   endif
+  " Run deoplete automatically
+  let g:deoplete#enable_at_startup=1
+  call deoplete#enable()
+  " Delay the completion after input in milliseconds
+  call deoplete#custom#option('auto_complete_delay', 200)
+  " Set the limit of candidates
+  call deoplete#custom#option('max_list', 64)
+  " Set the number of the input completion at the time of key input
+  call deoplete#custom#option('min_pattern_length', 2)
+  " When a capital letter is included in input, does not ignore
+  call deoplete#custom#option('smart_case', v:true)
+  " Close the preview window after completion is done
+  autocmd CompleteDone * pclose!
+  " Disable the preview window
+  set completeopt-=preview
 "" }}}
 
 
