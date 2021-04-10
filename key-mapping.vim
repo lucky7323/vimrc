@@ -104,3 +104,10 @@ nnoremap <C-j><C-j> :<C-u>execute 'move +'. v:count1<CR>
 " }}}
 
 
+""" Parentheses {{{
+  inoremap ( ()<Left>
+  inoremap (<CR> (<CR>)<Esc>O
+  inoremap (( (
+  inoremap () ()
+" }}}
+

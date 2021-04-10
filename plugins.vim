@@ -58,7 +58,7 @@
   Plug 'wellle/targets.vim'
   Plug 'editorconfig/editorconfig-vim'
   Plug 'terryma/vim-multiple-cursors'
-  Plug 'jiangmiao/auto-pairs'
+"  Plug 'jiangmiao/auto-pairs'
   Plug 'tpope/vim-surround'
   Plug 'Yggdroot/indentLine'
   " Plug 'tweekmonster/local-indent.vim'
