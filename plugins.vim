@@ -108,7 +108,7 @@
   \ ]
   \ }
   Plug 'junegunn/limelight.vim'
-  " Plug 'suan/vim-instant-markdown'
+  Plug 'suan/vim-instant-markdown', {'for': 'markdown'}
 
 
   "" Integration
